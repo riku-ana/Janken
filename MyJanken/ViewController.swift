@@ -16,27 +16,26 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var answerImageView: UIImageView!
-    
     @IBOutlet weak var answerLabel: UILabel!
     
     //じゃんけん(数字)
-      var answerNumber = 0
+    var answerNumber = 0
     
     @IBAction func shuffleAction(_ sender: Any) {
         if answerNumber == 0 {
             // グー
-        answerLabel.text = "グー"
-        answerImageView.image = UIImage(named:"gu")
+            answerLabel.text = "グー"
+            answerImageView.image = UIImage(named:"gu")
         }else if answerNumber == 1 {
-            //チョキ
-        answerLabel.text = "チョキ"
-        answerImageView.image = UIImage(named:"choki")
-               }else if answerNumber == 2 {
-            //パー
+            // チョキ
+            answerLabel.text = "チョキ"
+            answerImageView.image = UIImage(named:"choki")
+        }else if answerNumber == 2 {
+            // パー
             answerLabel.text = "パー"
             answerImageView.image = UIImage(named:"pa")
-    }
-        //次のじゃんけんへ
+        }
+        // 次のじゃんけんへ
         answerNumber = answerNumber + 1
     }
 }
